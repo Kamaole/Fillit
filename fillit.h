@@ -43,7 +43,7 @@ typedef struct			s_tet
 }						t_tet;
 
 t_list	*g_list;
-int		g_cnt = 0;
+//int		g_cnt = 0;
 int		g_time;
 
 t_list	*ft_lstrev(t_list **list);

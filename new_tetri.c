@@ -106,3 +106,38 @@ int		is_valid_input(char *str, int size_read)
 		return (0);
 	return (1);
 }
+
+t_tet	*get_tetri(char *str, char c)
+{
+	t_vec	*min;
+	t_vec	*max;
+	t_tet	*tetri;
+	char	**pos;
+	int		i;
+
+	//create min vector - init to largest extreme
+	min = new_vector(3, 3);
+	//create max vector - init to smallest extreme
+	max = new_vector(0, 0);
+
+	get_limits(str, min, max);
+	pos = ft_memalloc(sizeof(char *) * (max->y - min->y + 1));//amount of strings = tetri height
+	i = 0;
+	while (i < max->y - min->y + 1)
+	{
+		//size is = to tetri width 
+		pos[i] = ft_strnew(max->x - min->x + 1);
+		//get each line   ptr + min x value + ( index + min height ) * 5(number of chars per line) 
+		ft_strncpy(pos[i], (str + min->x + (i + min->y) * 5), (max->x - min->x + 1));
+		i++;
+	}
+	// i = 0;
+	// while (i < max->y - min->y + 1)
+	// {
+	// 	ft_putendl(pos[i]);
+	// 	i++;
+	// }
+	tetri = new_tetri(pos, max->x - min->x + 1, max->y - min->y + 1, c);
+	//free min and max
+	return (tetri);
+}
