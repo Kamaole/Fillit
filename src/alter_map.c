@@ -4,14 +4,7 @@ void	alter_map(t_tet *tetri, t_map *map, t_vec *pos, char c)
 {
 	int	i;
 	int	j;
-	// int z;
-
-	// z = 0;
-	// while (tetri->tab[0][z] != tetri->val)
-	// 	z++;
-	// if (pos->x >= z)
-	// 	pos->x -= z;
-
+	
 	j = 0;
 	while (j < tetri->height)
 	{
@@ -27,11 +20,4 @@ void	alter_map(t_tet *tetri, t_map *map, t_vec *pos, char c)
 		j++;
 	}
 	ft_memdel((void **)&pos);
-	// if (++g_cnt == 15)
-	// {
-	// 	print_map(map);
-	// 	ft_putchar('\n');
-	// 	usleep(10000);
-	// 	g_cnt = 0;
-	// }
 }

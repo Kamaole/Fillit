@@ -6,7 +6,7 @@
 /*   By: ahunt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/04 20:10:24 by ahunt             #+#    #+#             */
-/*   Updated: 2016/10/06 18:19:34 by ahunt            ###   ########.fr       */
+/*   Updated: 2016/10/11 14:29:48 by rmatos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 # include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <sys/types.h>
-# include <sys/uio.h>
 # include <fcntl.h>
 
 typedef struct			s_map
