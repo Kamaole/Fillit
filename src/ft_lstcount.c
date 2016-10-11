@@ -1,4 +1,4 @@
-#include "fillit.h"
+#include "../include/fillit.h"
 
 int		ft_lstcount(t_list *list)
 {
